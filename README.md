@@ -1,1 +1,1 @@
-"# example.kubernates.config" 
+# example.kubernates.config #
