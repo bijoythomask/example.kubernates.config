@@ -15,7 +15,7 @@ pipeline {
         sh 'echo  \'Deploying kubernetes front-end artifacts.\''
                
         kubernetesDeploy(
-          configs: 'front-end/front-end.deployment.yaml',        
+          configs: 'front-end/front-end.deployment.yaml,front-end/front-end.service.yaml,ingress.yaml',        
           enableConfigSubstitution: true,          
           kubeconfigId: 'ubuntu-virtual-machine'          
         )
