@@ -1,5 +1,11 @@
 pipeline {
   agent any
+
+  parameters {
+        stringParam(defaultValue: true, description: 'Build number of build image build', name: 'IMAGE_BUILD_NUMBER')
+  }
+
+
   stages {
     stage('Deploy front-end') {
       agent any
