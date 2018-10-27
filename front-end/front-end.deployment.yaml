@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: front-end
-        image: localhost:32000/nginx-fe:latest
+        image: localhost:32000/nginx-fe:$IMAGE_BUILD_NUMBER
         ports:
         - containerPort: 80

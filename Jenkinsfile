@@ -11,10 +11,9 @@ pipeline {
     stage('Deploy front-end') {
       agent any
       steps {
-        sh 'echo  \'Hello Kubernates world\''
 
-        sh "echo ${params.region}"
-
+        sh 'echo  \'Deploying kubernetes front-end artifacts.\''
+               
         kubernetesDeploy(
           configs: 'front-end/front-end.deployment.yaml',        
           enableConfigSubstitution: true,          
