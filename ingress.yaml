@@ -6,10 +6,10 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: localhost
-    http:
-      paths:
-      - path: /nginx
-        backend:
-          serviceName: front-end-svc
-          servicePort: 80
+    - http:
+        paths:
+        - path: /nginx
+          backend:
+            serviceName: front-end-svc
+            servicePort: 80
+
